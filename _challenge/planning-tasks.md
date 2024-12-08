@@ -1,5 +1,11 @@
 Planejamento e Tarefas do Projeto
 
+Certifique-se de que todas as dependências estejam instaladas e usando versões suportadas
+Certifique-se de que o CSS do Leaflet esteja carregado -> pegar css
+Certifique-se de que seu contêiner de mapa tenha uma altura definida -> definir altura
+
+Nas coordenadas pode ser usado: latLng(<Number> latitude, <Number> longitude, <Number> altitude?)
+
 # ○ L1: Número de redes, por país;
 -- Renderizar mapa inicial
 -- Mostrar todas as networks

@@ -1,6 +1,11 @@
+import { Mapa } from './components/Mapa';
+
 function App() {
-	const text = 'Hello';
-	return <h1>{text} Word</h1>;
+	return (
+		<section>
+			<Mapa />
+		</section>
+	);
 }
 
 export default App;
