@@ -1,0 +1,68 @@
+Planejamento e Tarefas do Projeto
+
+# ○ L1: Número de redes, por país;
+-- Renderizar mapa inicial
+-- Mostrar todas as networks
+-- Ao passar o mouse na Network
+----Mostrar o nome da network, país, n. de networks do país
+
+-- Ao clicar na Network
+---- Mostrar as estações da Network
+
+○ L2: Número de estações, por rede;
+-- Modal com a quantidade de Stations da Network 
+
+-- Ao Passar o mouse na Station
+----Mostrar o nome da Station e Network que pertece
+
+○ L3: Detalhes da estação.
+-- Ao clicar na Station
+----Mostrar detalhes da Station
+
+● Permita que o usuário faça uma busca detalhada, de L1 a L3, clicando nos marcadores.
+--criar sistema de busca
+----pesquisar por: cidade | network | station
+----gerar lista de sugestões
+----ao clicar numa sugestão
+------dar zoom no mapa, centralizar mapa com as coordenadas da city/rede/estação
+------as funcionalidade da station devem estar disponíveis
+
+##### criar
+● Permita que o usuário volte para a camada anterior.
+
+# Tecnologias
+Vite + React + Typescript
+Axios
+Zustand
+React-Leaflet
+Tailwind
+Biome
+Prettier
+Plugin Prettier Tailwind
+tabler icons | phosphor icon
+
+# Componenents Gerais
+-- Header
+----nome do desafio
+----link do repositório
+----link para manual do usuário
+
+-- Mapa
+
+-- Manual do Usuário (se der)
+----criar manual do usuário, descrever funcionalidade, icones, etc.
+
+-- Footer
+----<p>Desenvolvedor Patrick Lima</p>
+----linkar para meu portfólio
+
+
+#### Etapas
+[x] criação do projeto
+[x] criar planejamento do projeto
+[] instalar dependências
+[] criar componentes
+[] criar build
+[] criar testes (se der)
+[] implantar
+[] finalizar e entregar
