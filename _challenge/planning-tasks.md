@@ -31,15 +31,15 @@ Planejamento e Tarefas do Projeto
 ● Permita que o usuário volte para a camada anterior.
 
 # Tecnologias
-Vite + React + Typescript
+[x] Vite + React + Typescript
 Axios
 Zustand
 React-Leaflet
-Tailwind
-Biome
-Prettier
-Plugin Prettier Tailwind
-tabler icons | phosphor icon
+[x] Tailwind
+[x] Biome
+[x] Prettier
+[x] Plugin Prettier Tailwind
+[x] tabler icons | phosphor icon
 
 # Componenents Gerais
 -- Header
@@ -60,7 +60,7 @@ tabler icons | phosphor icon
 #### Etapas
 [x] criação do projeto
 [x] criar planejamento do projeto
-[] instalar dependências
+[x] instalar dependências
 [] criar componentes
 [] criar build
 [] criar testes (se der)
