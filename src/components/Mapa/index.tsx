@@ -15,33 +15,51 @@ const PinGroupIcon = L.icon({
 });
 
 export const Mapa = () => {
-	const { networks, getNetworks } = useNetworksStore();
+	const { networks, getNetworks, isLoading, error } = useNetworksStore();
 
 	useEffect(() => {
 		getNetworks();
 	}, [getNetworks]);
 
 	return (
-		<MapContainer
-			className='w-full relative h-[calc(100vh-3.2rem)] z-40'
-			center={[20, 0]}
-			zoom={3}
-			scrollWheelZoom={false}>
-			<TileLayer
-				attribution={tileLeyerAttribute}
-				url={tileLeyerUrl}
-			/>
+		<div>
+			{isLoading ? (
+				<p className='absolute left-2 bottom-2 z-50 text-xs sm:text-sm'>
+					Networks loading...
+				</p>
+			) : (
+				<p className='absolute left-2 bottom-2 z-50 text-xs sm:text-sm'>
+					Networks in the world: {networks.length}
+				</p>
+			)}
 
-			{networks.map(network => (
-				<Marker
-					icon={PinGroupIcon}
-					key={network.id}
-					position={[network.location.latitude, network.location.longitude]}>
-					<Popup>
-						{network.name} <br /> Country: {network.location.country}
-					</Popup>
-				</Marker>
-			))}
-		</MapContainer>
+			{error && (
+				<p className='absolute left-2 bottom-6 z-50 text-xs sm:text-sm text-red-600'>
+					{error}
+				</p>
+			)}
+
+			<MapContainer
+				className='w-full relative h-[calc(100vh-3.2rem)] z-40'
+				center={[20, 0]}
+				zoom={3}
+				scrollWheelZoom={false}>
+				<TileLayer
+					attribution={tileLeyerAttribute}
+					url={tileLeyerUrl}
+				/>
+
+				{networks.map(network => (
+					<Marker
+						icon={PinGroupIcon}
+						key={network.id}
+						position={[network.location.latitude, network.location.longitude]}>
+						<Popup>
+							{network.name} <br /> Country: {network.location.country}
+						</Popup>
+					</Marker>
+				))}
+			</MapContainer>
+		</div>
 	);
 };
