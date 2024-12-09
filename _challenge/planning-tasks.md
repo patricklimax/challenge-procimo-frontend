@@ -17,17 +17,18 @@ Nas coordenadas pode ser usado: latLng(<Number> latitude, <Number> longitude, <N
 -- agrupar networks por país
 -- [x] Não mostrar todas as networks inicialmente
 -- com o agrupamento
-----pegar o ponto médio das coordenadas das networks do país, ou...
-----pegar uma networks aleatória para representar o país
-----mostrar nessa network a quantidade de networks do país
+-- [NO] pegar o ponto médio das coordenadas das networks do país, ou...
+-- [x] pegar uma networks aleatória para representar o país
+-- [x] mostrar nessa network a quantidade de networks do país
+##### AO PASSAR O MOUSE MOSTRA A QDE DE NETWORKS DO PAÍS
 Assim a Tarefa L1: Número de redes, por país, fica resolvida
-----ao clicar nessa pin de agrupamento:
--- esconde esse pin de agrupamento
--- da zoom no mapa
--- mostra as networks do país da network clicada
+-- [x] ao clicar nessa pin de agrupamento:
+-- [x] esconde esse pin de agrupamento
+-- [x] da zoom no mapa
+-- [x] mostra as networks do país da network clicada
 -- botão para:
-----stations da network clicada
-----voltar para camada anterior
+-- stations da network clicada
+-- [x] voltar para camada anterior
 
 -- Ao clicar na Network
 ---- Mostrar as estações da Network
