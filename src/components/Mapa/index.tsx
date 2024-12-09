@@ -1,13 +1,19 @@
+import L from 'leaflet';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from 'react';
 import { api } from '../../api/axios';
+import GroupPin from '../../assets/pin-group.svg';
 import type { Network } from '../../types/network';
 
 const tileLeyerAttribute =
 	'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 const tileLeyerUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 
+const PinGroupIcon = L.icon({
+	iconUrl: GroupPin,
+	iconSize: [24, 32]
+});
 export const Mapa = () => {
 	const [networks, setNetworks] = useState<Network[] | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
@@ -47,6 +53,7 @@ export const Mapa = () => {
 
 			{networks?.map(network => (
 				<Marker
+					icon={PinGroupIcon}
 					key={network.id}
 					position={[network.location.latitude, network.location.longitude]}>
 					<Popup>

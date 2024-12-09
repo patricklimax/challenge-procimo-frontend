@@ -7,15 +7,32 @@ Certifique-se de que seu contêiner de mapa tenha uma altura definida -> definir
 Nas coordenadas pode ser usado: latLng(<Number> latitude, <Number> longitude, <Number> altitude?)
 
 # ○ L1: Número de redes, por país;
--- Renderizar mapa inicial
--- Mostrar todas as networks
--- Ao passar o mouse na Network
-----Mostrar o nome da network, país, n. de networks do país
+-- [x] Renderizar mapa inicial
+-- [x] Mostrar todas as networks
+-- [x] Ao passar o mouse na Network
+-- [x] Mostrar o nome da network, país, n. de networks do país
+
+##### mudança
+-- usar o zustand para gerenciar o estado, networks, stations, etc.
+-- agrupar networks por país
+-- [x] Não mostrar todas as networks inicialmente
+-- com o agrupamento
+----pegar o ponto médio das coordenadas das networks do país, ou...
+----pegar uma networks aleatória para representar o país
+----mostrar nessa network a quantidade de networks do país
+Assim a Tarefa L1: Número de redes, por país, fica resolvida
+----ao clicar nessa pin de agrupamento:
+-- esconde esse pin de agrupamento
+-- da zoom no mapa
+-- mostra as networks do país da network clicada
+-- botão para:
+----stations da network clicada
+----voltar para camada anterior
 
 -- Ao clicar na Network
 ---- Mostrar as estações da Network
 
-○ L2: Número de estações, por rede;
+# ○ L2: Número de estações, por rede;
 -- Modal com a quantidade de Stations da Network 
 
 -- Ao Passar o mouse na Station
