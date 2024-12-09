@@ -1,10 +1,9 @@
 import L from 'leaflet';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { useEffect, useState } from 'react';
-import { api } from '../../api/axios';
+import { useEffect } from 'react';
 import GroupPin from '../../assets/pin-group.svg';
-import type { Network } from '../../types/network';
+import { useNetworksStore } from '../../stores/use-networks-store';
 
 const tileLeyerAttribute =
 	'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
@@ -14,36 +13,18 @@ const PinGroupIcon = L.icon({
 	iconUrl: GroupPin,
 	iconSize: [24, 32]
 });
+
 export const Mapa = () => {
-	const [networks, setNetworks] = useState<Network[] | null>(null);
-	const [isLoading, setIsLoading] = useState(true);
-	const [error, setError] = useState<string | null>(null);
+	const { networks, getNetworks } = useNetworksStore();
 
 	useEffect(() => {
-		const getNetworks = async () => {
-			try {
-				setIsLoading(true);
-				const response = await api.get('/networks');
-				const data: Network[] = await response.data.networks;
-				setNetworks(data);
-				console.log('Networks List', data);
-			} catch (error) {
-				console.error('erro:', error);
-				setError('Erro ao buscar redes');
-			} finally {
-				setIsLoading(false);
-			}
-		};
 		getNetworks();
-	}, []);
-
-	if (isLoading) return <p>Carregando...</p>;
-	if (error) return <p>Erro: {error}</p>;
+	}, [getNetworks]);
 
 	return (
 		<MapContainer
 			className='w-full relative h-[calc(100vh-3.2rem)] z-40'
-			center={[29.25, 0.25]}
+			center={[20, 0]}
 			zoom={3}
 			scrollWheelZoom={false}>
 			<TileLayer
@@ -51,7 +32,7 @@ export const Mapa = () => {
 				url={tileLeyerUrl}
 			/>
 
-			{networks?.map(network => (
+			{networks.map(network => (
 				<Marker
 					icon={PinGroupIcon}
 					key={network.id}

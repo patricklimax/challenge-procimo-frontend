@@ -5,8 +5,8 @@
       <!-- Animação de cor -->
       <animate
          attributeName="fill"
-         values="#165a17;#ff0000;#165a17"
-         dur="4s"
+         values="#165a17;#ff0000"
+         dur="1s"
          repeatCount="indefinite" />
 
       <!-- Animação de escala -->
