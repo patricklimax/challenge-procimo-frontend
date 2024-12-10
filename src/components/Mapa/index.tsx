@@ -5,7 +5,7 @@ import { useNetworksIDStore } from '../../stores/use-network-id-store';
 import { useNetworksStore } from '../../stores/use-networks-store';
 import { ErrorNetwork } from '../Error';
 import { Loading } from '../Loading';
-import { MarkerNetwork } from '../MarkerNetwork';
+import { MarkerNetwork } from '../Markers';
 
 const tileLeyerAttribute =
 	'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';

@@ -7,6 +7,8 @@ import { useFirstNetworkCountry } from '../../hooks/use-first-network-country';
 import { useNetworksIDStore } from '../../stores/use-network-id-store';
 import { useNetworksStore } from '../../stores/use-networks-store';
 import { Button } from '../button';
+import { ClickToMore } from '../click-to-more';
+import { Info } from '../information';
 
 const PinGroupIcon = L.icon({
 	iconUrl: GroupPin,
@@ -66,6 +68,12 @@ export const MarkerNetwork = () => {
 		setNetworkShow(!networkShow);
 	};
 
+	const resetMapToNetworks = () => {
+		map.setZoom(5);
+		setStationShow(!stationShow);
+		setNetworkShow(!networkShow);
+	};
+
 	return (
 		<>
 			{groupShow &&
@@ -84,8 +92,11 @@ export const MarkerNetwork = () => {
 							}
 						}}>
 						<Tooltip>
-							{network.nameCountry} - {network.countNetwork} Network(s)
-							<p className='text-[10px] font-semibold'>Clique para ver mais</p>
+							<p className='text-lg'>
+								{network.nameCountry} - {network.countNetwork} Network(s)
+							</p>
+
+							<ClickToMore />
 						</Tooltip>
 					</Marker>
 				))}
@@ -100,17 +111,32 @@ export const MarkerNetwork = () => {
 							eventHandlers={{
 								click: () => {
 									handleClickNetwork(network.id);
-								}
+								},
+								mouseover: () => map.closePopup()
 							}}>
-							<Popup>
-								<p className='text-xs'>Newtork Name: {network.name}</p>
+							<Tooltip>
+								<div className='p-2'>
+									<p className='text-lg'>
+										{network.name} - {network.location.city}
+									</p>
+									<ClickToMore />
+								</div>
+							</Tooltip>
 
-								<p className='text-xs'>
-									{countStationsNetworkSelected} Stations
-								</p>
+							<Popup>
+								<h2 className='font-bold text-center'>Network Information</h2>
+								<Info
+									keyInfo={'Name'}
+									bodyInfo={network.name}
+								/>
+								<Info
+									keyInfo={'Stations'}
+									bodyInfo={countStationsNetworkSelected}
+								/>
 
 								<div className='flex gap-2 items-center justify-center'>
 									<Button
+										className='text-white'
 										onClick={() =>
 											handleClickNetworkToStation(
 												network.id,
@@ -118,10 +144,14 @@ export const MarkerNetwork = () => {
 												network.location.longitude
 											)
 										}>
-										Stations
+										See Stations
 									</Button>
 
-									<Button onClick={backToGroup}>Reset Map</Button>
+									<Button
+										className='bg-transparent'
+										onClick={backToGroup}>
+										Back to Group
+									</Button>
 								</div>
 							</Popup>
 						</Marker>
@@ -132,8 +162,58 @@ export const MarkerNetwork = () => {
 					<Marker
 						icon={PinStationIcon}
 						key={item.id}
-						position={[item.latitude, item.longitude]}>
-						<Tooltip>Station Name: {item.name}</Tooltip>
+						position={[item.latitude, item.longitude]}
+						eventHandlers={{
+							click: () => {
+								map.closeTooltip();
+							},
+							mouseover: () => map.closePopup()
+						}}>
+						<Tooltip>
+							<h2 className='font-bold text-center'>Station Details</h2>
+
+							<Info
+								keyInfo={'Name'}
+								bodyInfo={item.name}
+							/>
+							<Info
+								keyInfo={'Empty Slots'}
+								bodyInfo={item.empty_slots}
+							/>
+							<Info
+								keyInfo={'Free Bikes'}
+								bodyInfo={item.free_bikes}
+							/>
+							<Info
+								keyInfo={'Timestamp'}
+								bodyInfo={item.timestamp}
+							/>
+						</Tooltip>
+
+						<Popup>
+							<h2 className='font-bold text-center'>Station Details</h2>
+
+							<Info
+								keyInfo={'Name'}
+								bodyInfo={item.name}
+							/>
+							<Info
+								keyInfo={'Empty Slots'}
+								bodyInfo={item.empty_slots}
+							/>
+							<Info
+								keyInfo={'Free Bikes'}
+								bodyInfo={item.free_bikes}
+							/>
+							<Info
+								keyInfo={'Timestamp'}
+								bodyInfo={item.timestamp}
+							/>
+
+							<div className='flex gap-2 items-center justify-center'>
+								<Button onClick={resetMapToNetworks}>Back Networks</Button>
+							</div>
+						</Popup>
 					</Marker>
 				))}
 		</>
