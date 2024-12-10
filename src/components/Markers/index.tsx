@@ -2,6 +2,7 @@ import L from 'leaflet';
 import { useState } from 'react';
 import { Marker, Popup, Tooltip, useMap } from 'react-leaflet';
 import GroupPin from '../../assets/pin-group.svg';
+import NetworkPin from '../../assets/pin-network.svg';
 import StationPin from '../../assets/pin-station.svg';
 import { useFirstNetworkCountry } from '../../hooks/use-first-network-country';
 import { useNetworksIDStore } from '../../stores/use-network-id-store';
@@ -12,6 +13,11 @@ import { Info } from '../information';
 
 const PinGroupIcon = L.icon({
 	iconUrl: GroupPin,
+	iconSize: [24, 32]
+});
+
+const PinNetworkIcon = L.icon({
+	iconUrl: NetworkPin,
 	iconSize: [24, 32]
 });
 
@@ -107,6 +113,7 @@ export const MarkerNetwork = () => {
 					.map(network => (
 						<Marker
 							key={network.id}
+							icon={PinNetworkIcon}
 							position={[network.location.latitude, network.location.longitude]}
 							eventHandlers={{
 								click: () => {
