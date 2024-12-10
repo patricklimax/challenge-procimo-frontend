@@ -6,6 +6,7 @@ import StationPin from '../../assets/pin-station.svg';
 import { useFirstNetworkCountry } from '../../hooks/use-first-network-country';
 import { useNetworksIDStore } from '../../stores/use-network-id-store';
 import { useNetworksStore } from '../../stores/use-networks-store';
+import { Button } from '../button';
 
 const PinGroupIcon = L.icon({
 	iconUrl: GroupPin,
@@ -109,25 +110,18 @@ export const MarkerNetwork = () => {
 								</p>
 
 								<div className='flex gap-2 items-center justify-center'>
-									<button
+									<Button
 										onClick={() =>
 											handleClickNetworkToStation(
 												network.id,
 												network.location.latitude,
 												network.location.longitude
 											)
-										}
-										className='px-2 py-1 border text-center text-blue-950 rounded-md text-[10px] font-semibold bg-blue-400 transition-all duration-300 hover:bg-blue-300'
-										type='button'>
+										}>
 										Stations
-									</button>
+									</Button>
 
-									<button
-										onClick={backToGroup}
-										className='px-2 py-1 border text-center text-blue-950 rounded-md text-[10px] font-semibold bg-blue-400 transition-all duration-300 hover:bg-blue-300'
-										type='button'>
-										Reset Map
-									</button>
+									<Button onClick={backToGroup}>Reset Map</Button>
 								</div>
 							</Popup>
 						</Marker>
