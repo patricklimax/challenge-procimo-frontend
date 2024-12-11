@@ -7,9 +7,7 @@ import { UlList } from '../components/ul-list';
 export const FeatureDetails = () => {
 	return (
 		<BoxDiv>
-			<SubtitleUserManual>
-				As principais funcionalidades incluem:
-			</SubtitleUserManual>
+			<SubtitleUserManual>Main features:</SubtitleUserManual>
 			<UlList>
 				<LiList>
 					<div className='flex p-1 items-center justify-center'>
@@ -20,8 +18,8 @@ export const FeatureDetails = () => {
 						/>
 					</div>
 					<p>
-						Exibição de dados em um mapa interativo com camadas detalhadas
-						(país, redes, estações e detalhes das estações).
+						Display data on an interactive map with detailed layers (country,
+						networks, stations and station details).
 					</p>
 				</LiList>
 				<LiList>
@@ -33,8 +31,8 @@ export const FeatureDetails = () => {
 						/>
 					</div>
 					<p>
-						Sistema de busca para redes e estações, atráves da cidade ou do nome
-						da rede.
+						Search system for networks and stations, using the city or network
+						name.
 					</p>
 				</LiList>
 				<LiList>
@@ -46,8 +44,8 @@ export const FeatureDetails = () => {
 						/>
 					</div>
 					<p>
-						Modais e tooltips que exibem informações detalhadas sobre as redes e
-						estações.
+						Popups and Tooltips that display detailed information about networks
+						and stations.
 					</p>
 				</LiList>
 			</UlList>

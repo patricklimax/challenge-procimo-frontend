@@ -33,23 +33,9 @@ export const MarkerStation = () => {
 						key={item.id}
 						position={[item.latitude, item.longitude]}>
 						<Tooltip>
-							<h2 className='font-bold text-center'>Station Details</h2>
-
 							<Info
-								keyInfo={'Name'}
+								keyInfo={'Starion_Name'}
 								bodyInfo={item.name}
-							/>
-							<Info
-								keyInfo={'Empty Slots'}
-								bodyInfo={item.empty_slots}
-							/>
-							<Info
-								keyInfo={'Free Bikes'}
-								bodyInfo={item.free_bikes}
-							/>
-							<Info
-								keyInfo={'Timestamp'}
-								bodyInfo={item.timestamp}
 							/>
 						</Tooltip>
 

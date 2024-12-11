@@ -50,7 +50,7 @@ export const InputSearch = () => {
 					type='text'
 					name='inputSearch'
 					className='w-full rounded-md px-4 py-2 text-sm outline-none md:w-[28rem] md:text-xl'
-					placeholder='Pesquise por uma cidade ou rede...'
+					placeholder='Search for a city or network...'
 					onChange={e => setInputSearch(e.target.value)}
 					value={inputSearch}
 				/>

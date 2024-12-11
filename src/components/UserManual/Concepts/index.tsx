@@ -11,7 +11,7 @@ export const Concepts = () => {
 	return (
 		<BoxDiv>
 			<SubtitleUserManual>
-				Dentro do projeto, precisamos entender três conceitos:
+				Within the project, we need to understand three concepts:
 			</SubtitleUserManual>
 			<UlList>
 				<LiList>
@@ -21,13 +21,13 @@ export const Concepts = () => {
 							alt=''
 							className='h-6 w-6'
 						/>
-						<p className='font-bold uppercase'>Grupo</p>
+						<p className='font-bold uppercase'>Group</p>
 					</div>
 					<p className='flex-1'>
-						Refere-se ao país que contém um número xis de redes espalhadas por
-						seu território. Há países que não tem redes. Nos paises que possuem
-						redes é renderizado um ícone, que ao clicar mostrará as redes
-						disponíveis em seu território.
+						Refers to a country that has a certain number of networks spread
+						across its territory. There are countries that do not have networks.
+						In countries that have networks, an icon is displayed, which when
+						clicked will show the networks available in its territory.
 					</p>
 				</LiList>
 				<LiList>
@@ -37,13 +37,13 @@ export const Concepts = () => {
 							alt=''
 							className='h-6 w-6'
 						/>
-						<p className='font-bold uppercase'>Rede</p>
+						<p className='font-bold uppercase'>Network</p>
 					</div>
 					<p className='flex-1'>
-						Refere-se ao conjunto de estações de bicicletas públicas disponíveis
-						em uma cidade ou região. Uma rede pode incluir várias estações para
-						facilitar o uso de bicicletas compartilhadas. Ao clicar numa rede
-						você terá acesso às estações e outros detalhes.
+						Refers to the set of public bike stations available in a city or
+						region. A network can include several stations to facilitate the use
+						of shared bikes. Clicking on a network will give you access to the
+						stations and other details.
 					</p>
 				</LiList>
 				<LiList>
@@ -53,13 +53,13 @@ export const Concepts = () => {
 							alt=''
 							className='h-6 w-6'
 						/>
-						<p className='font-bold uppercase'>Estação</p>
+						<p className='font-bold uppercase'>Station</p>
 					</div>
 					<p className='flex-1'>
-						É um ponto físico dentro de uma rede onde as bicicletas são
-						disponibilizadas para os usuários. As estações são locais de
-						retirada e devolução das bicicletas. Ao clicar em uma estação você
-						terá acesso às informações dessa estação.
+						It is a physical point within a network where bicycles are made
+						available to users. Stations are places where bicycles can be picked
+						up and returned. By clicking on a station, you will have access to
+						information about that station.
 					</p>
 				</LiList>
 			</UlList>
