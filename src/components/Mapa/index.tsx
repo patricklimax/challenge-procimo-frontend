@@ -1,27 +1,21 @@
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useEffect } from 'react';
-import { useNetworksIDStore } from '../../stores/use-network-id-store';
 import { useNetworksStore } from '../../stores/use-networks-store';
 import { ErrorNetwork } from '../Error';
 import { Loading } from '../Loading';
-import { MarkerNetwork } from '../Markers';
+import { Markers } from '../Markers';
 
 const tileLeyerAttribute =
 	'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 const tileLeyerUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 
-export const Mapa = ({ id }: { id: string }) => {
+export const Mapa = () => {
 	const { getNetworks } = useNetworksStore();
-	const { getNetworkById } = useNetworksIDStore();
 
 	useEffect(() => {
 		getNetworks();
 	}, [getNetworks]);
-
-	useEffect(() => {
-		getNetworkById(id);
-	}, [id, getNetworkById]);
 
 	return (
 		<>
@@ -39,7 +33,7 @@ export const Mapa = ({ id }: { id: string }) => {
 					url={tileLeyerUrl}
 				/>
 
-				<MarkerNetwork />
+				<Markers />
 			</MapContainer>
 		</>
 	);
