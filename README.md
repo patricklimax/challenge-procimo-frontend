@@ -150,6 +150,10 @@ MarkerGroup: renderiza Marcador no mapa referente ao País que possí Network;</
 MarkerNetwork: renderiza Marcador no mapa referente as Networks;</br>
 MarkerStation: renderiza Marcador no mapa referente as Stations;</br>
 
+### ModalNetwork
+
+Este Componente recebe as informações referente a quantidade de Stations de uma NetworkÉ exibido sempre que o usuário clica em uma rede. O gerenciamento do estado de exibição deste modal e das função de abrir e fechar, são gerenciadas via Zustand.
+
 ### UserManual
 
 Exibe um manual simplificado sobre a aplicação e está voltado para o usuário. Este componente é composto por outros pequenos componentes para facilitar a manutenção.
