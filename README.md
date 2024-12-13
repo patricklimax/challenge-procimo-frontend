@@ -115,6 +115,7 @@ Projeto foi arquitetado usando o mapa de atividades abaixo:
 ● Zustand;<br />
 ● Tailwind;<br />
 ● Phosphor Icon;<br />
+● Vitest;<br />
 
 # Componentes
 
