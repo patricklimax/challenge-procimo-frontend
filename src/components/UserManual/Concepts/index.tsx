@@ -43,7 +43,8 @@ export const Concepts = () => {
 						Refers to the set of public bike stations available in a city or
 						region. A network can include several stations to facilitate the use
 						of shared bikes. Clicking on a network will give you access to the
-						stations and other details.
+						stations and other details. You can go back to the previous layer by
+						clicking on the Network Popup "Back To Group" button.
 					</p>
 				</LiList>
 				<LiList>
@@ -59,7 +60,8 @@ export const Concepts = () => {
 						It is a physical point within a network where bicycles are made
 						available to users. Stations are places where bicycles can be picked
 						up and returned. By clicking on a station, you will have access to
-						information about that station.
+						information about that station. You can go back to the previous
+						layer by clicking on the Network Popup "Back Networks" button.
 					</p>
 				</LiList>
 			</UlList>

@@ -32,7 +32,8 @@ export const FeatureDetails = () => {
 					</div>
 					<p>
 						Search system for networks and stations, using the city or network
-						name.
+						name. You can go back to the previous layer by clicking on the X
+						inserted in the input.
 					</p>
 				</LiList>
 				<LiList>
