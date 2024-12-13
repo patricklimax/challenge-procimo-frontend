@@ -5,6 +5,7 @@ import type { Station } from '../types/station';
 
 type NetworkIDStoreProps = {
 	error: string | null;
+	isLoading: boolean;
 	selectedNetwork: Network | null;
 	stationsOfNetworkSelected: Station[];
 	countStationsNetworkSelected: number;
@@ -14,13 +15,14 @@ type NetworkIDStoreProps = {
 
 export const useNetworksIDStore = create<NetworkIDStoreProps>(set => ({
 	error: null,
+	isLoading: false,
 
 	selectedNetwork: null,
 	stationsOfNetworkSelected: [],
 	countStationsNetworkSelected: 0,
 
 	getNetworkById: async (id: string) => {
-		set({ error: null });
+		set({ isLoading: false, error: null });
 
 		try {
 			const response = await api.get(`/networks/${id}`);
@@ -30,9 +32,10 @@ export const useNetworksIDStore = create<NetworkIDStoreProps>(set => ({
 				stationsOfNetworkSelected: network.stations,
 				countStationsNetworkSelected: network.stations.length
 			});
-		} catch (error) {
-			set({ error: 'Erro ao carregar a network - store' });
-			console.error(`Erro ao buscar a network com ID ${id} - store`, error);
+		} catch {
+			set({ error: 'Erro ao carregar a networkID - store' });
+		} finally {
+			set({ isLoading: false });
 		}
 	}
 }));
