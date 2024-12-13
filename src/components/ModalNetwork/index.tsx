@@ -41,12 +41,12 @@ export const ModalNetwork = () => {
 		map.setView([20, 0], 3);
 	};
 
-	// const backToGroup = () => {
-	// 	closeModalNetwork();
-	// 	hideMarkerNetwork();
-	// 	showMarkerGroup();
-	// 	map.setView([20, 0], 3);
-	// };
+	const backToGroup = () => {
+		closeModalNetwork();
+		hideMarkerNetwork();
+		showMarkerGroup();
+		map.setView([20, 0], 3);
+	};
 	return (
 		<>
 			{isModalOpenNetwork && (
@@ -115,11 +115,11 @@ export const ModalNetwork = () => {
 								</Button>
 							)}
 
-							{/* <Button
+							<Button
 								className='bg-transparent'
 								onClick={backToGroup}>
 								Back to Group
-							</Button> */}
+							</Button>
 						</div>
 					</div>
 				</div>
