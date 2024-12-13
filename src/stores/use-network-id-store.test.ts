@@ -73,7 +73,7 @@ describe('Teste da Store useNetworksIDStore', () => {
 		const promise = getNetworkById('1');
 
 		// enquanto a promise não é resolvida
-		expect(useNetworksIDStore.getState().isLoading).toBe(false);
+		expect(useNetworksIDStore.getState().isLoading).toBe(true);
 
 		// ao aguardar a conclusão
 		await promise;
