@@ -1,11 +1,11 @@
 type InfoProps = {
 	keyInfo: string;
-	bodyInfo: string | number;
+	bodyInfo: string | number | null;
 };
 
 export const Info = ({ keyInfo, bodyInfo }: InfoProps) => {
 	return (
-		<p className='text-xs'>
+		<p className='text-sm'>
 			<span className='font-semibold'>{keyInfo}: </span> {bodyInfo}
 		</p>
 	);

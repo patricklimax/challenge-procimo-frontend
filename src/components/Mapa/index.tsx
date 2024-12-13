@@ -5,6 +5,7 @@ import { useNetworksStore } from '../../stores/use-networks-store';
 import { ErrorNetwork } from '../Error';
 import { Loading } from '../Loading';
 import { Markers } from '../Markers';
+import { ModalNetwork } from '../ModalNetwork';
 
 const tileLeyerAttribute =
 	'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
@@ -34,6 +35,8 @@ export const Mapa = () => {
 				/>
 
 				<Markers />
+
+				<ModalNetwork />
 			</MapContainer>
 		</>
 	);

@@ -22,7 +22,7 @@ export const useNetworksIDStore = create<NetworkIDStoreProps>(set => ({
 	countStationsNetworkSelected: 0,
 
 	getNetworkById: async (id: string) => {
-		set({ isLoading: false, error: null });
+		set({ isLoading: true, error: null });
 
 		try {
 			const response = await api.get(`/networks/${id}`);
