@@ -49,6 +49,8 @@ Projeto foi arquitetado usando o mapa de atividades abaixo:
 [x] Exibir mapa com react-leaflet e leaflet;<br />
 [x] Exibir, no mapa, marcadores por país mostrando a quantidade de redes por país<br />
 
+#### ○ L1: Número de redes, por país;
+
 # NO MARCADOR GRUPO/PAÍS:
 
 ### Evento hover:
@@ -69,8 +71,13 @@ Projeto foi arquitetado usando o mapa de atividades abaixo:
 ### Evento click:
 
 [x] Exibição do componente PopUp, do react-leaflet, com o nome da Network e a quantidade de Stations da Network clicada;<br />
+
+#### ○ L2: Número de estações, por rede;
+
 [x] Exibição do botão "See Stations". Ao clicar é aplicado Zoom no mapa com centralização do mapa com as coordenadas da Network clicada, e exibição dos Marcadores das Stations pertecentes a Network clicada; <br />
 [x] Exibição do botão "Back To Group". Ao clicar, reseta o mapa para o estado inicial, exibindo os Marcadores de País;<br />
+
+#### ● Permita que o usuário volte para a camada anterior.
 
 # NA ESTAÇÃO:
 
@@ -80,15 +87,24 @@ Projeto foi arquitetado usando o mapa de atividades abaixo:
 
 ### Evento click:
 
-[x] Exibição do componente PopUp, do react-leaflet, com o nome da Station clicada;<br />
+[x] Exibição do componente PopUp, do react-leaflet, com os detalhes da Station clicada;<br />
+
+#### ○ L3: Detalhes da estação.
+
 [x] Exibição do botão "Back Networks". Ao clicar, reseta o mapa para o estado de exibição dos Marcadores de Networks;<br />
 
+#### ● Permita que o usuário volte para a camada anterior.
+
 # Sistema de Busca:
+
+#### ● Permita que o usuário faça uma busca detalhada, de L1 a L3, clicando nos marcadores.
 
 [x] Sistema de busca via Input. Sendo a busca realizada pelo nome da Cidade ou nome da Network;<br />
 [x] Inserindo o termo da busca é renderizado uma lista com os nomes que contém o termo da busca, no formato: Network - Cidade;<br />
 [x] Ao clicar na opção deseja: é aplicado zoom no mapa, centralizado com as coordenadas da Network e exibe os Marcadores das Stations;<br />
 [x] Ao clicar no Icon X, inserindo no Input, reseta o mapa para o estado inicial;<br />
+
+#### ● Permita que o usuário volte para a camada anterior.
 
 # Tecnologias Utilizadas
 
@@ -149,7 +165,7 @@ Componente com estilização e uso não modificável.
 
 Componente usado para exibir informações nos PopUp das Networks e Stations.
 
-# Pastas
+# Diretórios
 
 ### api
 
@@ -213,6 +229,14 @@ Para rodar os testes, rode o seguinte comando
 
 ```bash
   npm run test
+```
+
+## Build
+
+Para buildar o projeto, rode o seguinte comando
+
+```bash
+  npm run build
 ```
 
 ## Contribuindo
