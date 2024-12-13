@@ -224,7 +224,9 @@ npm run dev
 
 - Acesse o projeto em `http://localhost:5173`
 
-## Rodando os testes (PENDENTE)
+## Rodando os testes
+
+Testes criados Vitest, para as stores useNetworksStore e useNetworksIDStore</br>
 
 Para rodar os testes, rode o seguinte comando
 

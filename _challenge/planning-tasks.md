@@ -51,12 +51,16 @@ Assim a Tarefa L1: Número de redes, por país, fica resolvida
 ##### PENDENTE ##### PRÓXIMA TAREFA
 
 ● Permita que o usuário faça uma busca detalhada, de L1 a L3, clicando nos marcadores.
---criar sistema de busca
-----pesquisar por: cidade | network | station
-----gerar lista de sugestões
+--[x] criar sistema de busca
+----[x] pesquisar por: cidade | network | station (por estação não)
+----[x] gerar lista de sugestões
 ----ao clicar numa sugestão
-------dar zoom no mapa, centralizar mapa com as coordenadas da city/rede/estação
-------as funcionalidade da station devem estar disponíveis
+------[x] dar zoom no mapa
+------[x] centralizar mapa com as coordenadas da city/rede
+------[x] mostrar as estações
+------[x] as funcionalidade da station devem estar disponíveis
+
+# semelhante ao da CityBikes
 
 [X] ● Permita que o usuário volte para a camada anterior.
 
@@ -89,7 +93,7 @@ Assim a Tarefa L1: Número de redes, por país, fica resolvida
 -- [x] ClickToMore
 
 -- Manual do Usuário (se der)
-----criar manual do usuário, descrever funcionalidade, icones, etc.
+----[x] criar manual do usuário, descrever funcionalidade, icones, etc.
 
 -- Footer
 ----[x] <p>Desenvolvedor Patrick Lima</p>
@@ -112,11 +116,11 @@ stores
 
 ###### // TODO - PENDENTE
 
--- sistema de busca
+-- [x] sistema de busca
 -- Modal com as informações da network
 -- Modal com a quantidade de Stations da Network
--- Manual do usuário
--- link do repositório
+-- [x] Manual do usuário
+-- [x] link do repositório
 --
 
 ###### // TODO
@@ -132,3 +136,17 @@ stores
 [] criar testes (se der)
 [] implantar
 [] finalizar e entregar
+
+##### TESTAR
+
+Chamada da api para pegar as networks - estado inicial - loading - erro
+Chamada da api para pegar as networks por id
+
+InputSearch - sim
+Mapa - sim
+Header - sim
+Error
+Footer
+Loading
+Markers
+UserManual
