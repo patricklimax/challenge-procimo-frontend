@@ -101,7 +101,7 @@ Projeto foi arquitetado usando o mapa de atividades abaixo:
 
 [x] Sistema de busca via Input. Sendo a busca realizada pelo nome da Cidade ou nome da Network;<br />
 [x] Inserindo o termo da busca é renderizado uma lista com os nomes que contém o termo da busca, no formato: Network - Cidade;<br />
-[x] Ao clicar na opção deseja: é aplicado zoom no mapa, centralizado com as coordenadas da Network e exibe os Marcadores das Stations;<br />
+[x] Ao clicar na opção desejada: é aplicado zoom no mapa, centralizado com as coordenadas da Network e exibe os Marcadores das Stations;<br />
 [x] Ao clicar no Icon X, inserindo no Input, reseta o mapa para o estado inicial;<br />
 
 #### ● Permita que o usuário volte para a camada anterior.
@@ -121,23 +121,23 @@ Projeto foi arquitetado usando o mapa de atividades abaixo:
 
 ### Header
 
-Este Componente exibe as boas vinda ao desafio, o nome do desafio e um sistema de navegação de links com o link para o repositório do projeto e redirecionamento para seção do UserManual.
+Exibe as boas vinda ao desafio, o nome do desafio e um sistema de navegação de links com o redirecionamento para o repositório do projeto e para seção do UserManual.
 
 ### App
 
-Responsável por receber os componetes de Map e User Manual.
+Responsável por receber os componentes de Map e User Manual.
 
 ### Mapa
 
-Este Componente é responsável por exibir a interface principal do mapa, exibir as coordenadas geográficas de cada rede, estação de acordo com a interação do usuário. Bem como as mensagens de carregamento e erro.
+Exibe a interface principal do mapa, com os marcadores de group, network e station, de acordo com suas respectivas coordenadas geográficas, Tooltip e Popup com as informações das networks e stations, e mensagem de carregamento e erro.
 
 ### Loading
 
-Este Componente mostra uma mensagem de carregamento, sempre que os dados são carregados na tela, e depois dos dados carregados, exibe uma mensagem com a quantidade de redes da api CityBik.
+Exibe mensagem de carregamento, sempre que os dados são carregados na tela, e depois dos dados carregados, exibe uma mensagem com a quantidade de redes da api CityBik.
 
 ### Error
 
-Exibe a mensagem em caso de erro dos dados da api.
+Exibe a mensagem de erro, em caso de erro na busca dos dados na api.
 
 ### InputSearch
 
@@ -152,15 +152,15 @@ MarkerStation: renderiza Marcador no mapa referente as Stations;</br>
 
 ### UserManual
 
-Componente responsável por exibir um manual simplificado sobre a aplicado voltado para o usuário. Este componente é composto por outros pequenos componentes para facilitar a manutenção.
+Exibe um manual simplificado sobre a aplicação e está voltado para o usuário. Este componente é composto por outros pequenos componentes para facilitar a manutenção.
 
 ### Button
 
-Componente de botão reutilizável usando na aplicação.
+Componente de botão reutilizável.
 
 ### ClickToMore
 
-Componente com estilização e uso não modificável.
+Componente com estilização e uso não modificável. Usado para mostrar mensagem: Click on the marker to see more...
 
 ### Info
 
@@ -178,7 +178,7 @@ Guarda os svgs dos Marcadores utilizados.
 
 ### hooks
 
-Armazena o hook useFirstNetworkCountry, que agrupa as Netorks por País no objeto "obj: {key: Networks[]}", pega a primeira Network do país e retorna sua informações.
+Armazena o hook useFirstNetworkCountry, que agrupa as Networks por País no objeto "obj: {key: Networks[]}", pega a primeira Network do país e retorna sua informações.
 
 ### stores
 
@@ -192,7 +192,7 @@ Armazena os stores: </br>
 
 ### types
 
-Armazena os types das Netorks e Stations.
+Armazena os types das Networks e Stations.
 
 ## Instalação
 
@@ -207,7 +207,7 @@ Como Rodar o Projeto Localmente
 - Navegue até o diretório do projeto:
 
 ```bash
-cd [nome-do-projeto]
+cd challenge-procimo-frontend ou [nome-do-projeto] (caso seja modificado)
 ```
 
 - Instale as dependências:
@@ -226,7 +226,7 @@ npm run dev
 
 ## Rodando os testes
 
-Testes criados Vitest, para as stores useNetworksStore e useNetworksIDStore</br>
+Testes criados com Vitest, para as stores useNetworksStore e useNetworksIDStore</br>
 
 Para rodar os testes, rode o seguinte comando
 
@@ -243,8 +243,6 @@ Para buildar o projeto, rode o seguinte comando
 ```
 
 ## Contribuindo
-
-Contribuições são sempre bem-vindas!
 
 Contribuições são bem-vindas! Se você deseja sugerir melhorias ou relatar problemas, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
