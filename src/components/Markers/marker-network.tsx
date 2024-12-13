@@ -61,8 +61,7 @@ export const MarkerNetwork = () => {
 							eventHandlers={{
 								click: () => {
 									handleClickNetwork(network.id);
-								},
-								mouseover: () => map.closePopup()
+								}
 							}}>
 							<Tooltip>
 								<div className='p-2'>
